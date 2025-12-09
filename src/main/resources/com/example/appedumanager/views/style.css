@@ -1,0 +1,540 @@
+/* --- GERAL --- */
+.root {
+    -fx-font-family: "System";
+    -fx-background-color: #f8f9fa; /* Cinza claro de fundo */
+    -fx-font-size: 14px;
+    -fx-font-smoothing-type: antialiased;
+}
+
+/* --- BARRA LATERAL (Sidebar) --- */
+.sidebar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+.sidebar-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10 0 10 5;
+}
+.sidebar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-background-radius: 6;
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-width: 200;
+    -fx-effect: none;
+    -fx-cursor: hand;
+}
+.sidebar .button:hover {
+    -fx-background-color: #34495e;
+}
+.sidebar .titled-pane {
+    -fx-text-fill: white;
+}
+.sidebar .titled-pane > .title {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.sidebar .titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color: white;
+}
+.sidebar .titled-pane > .content {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 0 0 0 10;
+    -fx-border-color: transparent;
+}
+.sidebar .titled-pane > .content .button {
+    -fx-font-size: 13px;
+}
+
+/* --- ÁREA DE CONTEÚDO (Centro) --- */
+.content-pane {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 20;
+}
+
+/* --- O "CARTÃO" ROBUSTO PARA FORMULÁRIOS --- */
+.form-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 15, 0.3, 0, 4);
+}
+
+/* --- BARRA DE STATUS (Abaixo) --- */
+.status-bar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dddddd transparent transparent transparent;
+    -fx-border-width: 1;
+    -fx-padding: 5 10;
+}
+.status-bar Label {
+    -fx-text-fill: #555555;
+}
+
+/* --- TÍTULOS E RÓTULOS (Labels) --- */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: 300;
+    -fx-text-fill: #333333;
+    -fx-padding-bottom: 15px;
+}
+
+.form-label, .result-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+    -fx-alignment: center-right;
+    -fx-padding: 5 0 0 0;
+}
+
+.result-data {
+    -fx-font-size: 15px;
+    -fx-text-fill: #222222;
+    -fx-padding: 3 0 0 5;
+}
+
+/* --- SEPARADOR --- */
+.separator .line {
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* --- CAMPOS DE FORMULÁRIO GERAIS --- */
+.text-field,
+.combo-box,
+.choice-box {
+    -fx-background-color: #fdfdfd;
+    -fx-background-radius: 6;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 6;
+    -fx-prompt-text-fill: #888;
+    -fx-padding: 8px 10px;
+    -fx-font-size: 14px;
+}
+
+/* Foco refinado */
+.text-field:focused,
+.combo-box:focused,
+.choice-box:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 1px;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.3), 5, 0, 0, 0);
+}
+
+/* --- CHECKBOX --- */
+.check-box {
+    -fx-padding: 5px 0px;
+}
+.check-box .box {
+    -fx-background-color: #fdfdfd;
+    -fx-background-radius: 4;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4;
+    -fx-border-width: 1px;
+}
+.check-box:selected .box {
+    -fx-background-color: #007bff;
+    -fx-border-color: #007bff;
+}
+
+/* --- BOTÕES DE AÇÃO --- */
+#btnSalvar, #btnBuscar {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0.1, 0, 1);
+}
+
+#btnSalvar:hover, #btnBuscar:hover {
+    -fx-background-color: #0069d9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0.2, 0, 2);
+}
+
+#btnSalvar:pressed, #btnBuscar:pressed {
+    -fx-background-color: #0056b3;
+    -fx-effect: none;
+}
+
+/* --- VALIDAÇÃO E NOTIFICAÇÃO --- */
+.text-field.error,
+.combo-box.error {
+    -fx-border-color: #dc3545;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(220,53,69,0.3), 5, 0, 0, 0);
+}
+
+#lblStatus.error-message {
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    -fx-text-fill: #dc3545;
+}
+
+#lblStatus.success-message {
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    -fx-text-fill: #28a745;
+}
+
+/* --- SCROLLBAR --- */
+.scroll-pane > .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+}
+.scroll-pane > .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-height: 10;
+}
+.scroll-pane > .scroll-bar .thumb {
+    -fx-background-color: #c5c5c5;
+    -fx-background-radius: 5;
+}
+.scroll-pane > .scroll-bar .thumb:hover {
+    -fx-background-color: #a5a5a5;
+}
+.scroll-pane > .scroll-bar .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 5;
+}
+
+/* --- DIÁLOGOS (ALERTS) --- */
+.dialog-pane {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 5);
+}
+.dialog-pane .header-panel {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 15px;
+}
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.dialog-pane .content {
+    -fx-padding: 20px;
+}
+.dialog-pane .content .label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+}
+.dialog-pane .button-bar .button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #0069d9;
+}
+.dialog-pane .button-bar .button:pressed {
+    -fx-background-color: #0056b3;
+}
+
+/* ===========================================================
+   ESTILO GLOBAL PARA TEXTFIELDS PROFISSIONAIS
+   =========================================================== */
+.text-field {
+    -fx-background-color: #f4f6f9;
+    -fx-text-fill: #1a1a1a;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #d0d5dd;
+    -fx-border-width: 1.2;
+    -fx-padding: 8 10;
+    -fx-font-size: 14px;
+    -fx-background-insets: 0;
+}
+
+.text-field:hover {
+    -fx-border-color: #b8bec9;
+}
+
+.text-field:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #4a90e2;
+    -fx-border-width: 1.6;
+    -fx-effect: dropshadow(gaussian, rgba(74,144,226,0.25), 6, 0.2, 0, 0);
+}
+
+/* ===========================================================
+   MODO SOMENTE LEITURA (Salvo/Travado)
+   =========================================================== */
+
+/* --- Regra 1: Para TextFields (Aplica a borda ao campo todo) --- */
+.text-field.campo-somente-leitura {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1a1a1a;
+
+    /* Borda Verde no campo de texto */
+    -fx-border-color: #28a745;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+
+    -fx-opacity: 1;
+    /* Efeito de brilho suave opcional */
+    -fx-effect: dropshadow(gaussian, rgba(40, 167, 69, 0.15), 5, 0, 0, 0);
+}
+
+/* --- Regra 2: Específica para o "quadradinho" do CheckBox --- */
+/* O seletor .check-box .box pega o quadrado dentro do checkbox */
+.check-box.campo-somente-leitura .box {
+    /* Borda Verde APENAS no quadrado */
+    -fx-border-color: #28a745 !important; /* !important garante que sobrescreva a cor padrão */
+    -fx-border-width: 1.5px;
+    /* Mantém o fundo do quadrado branco ou da cor definida anteriormente */
+    -fx-background-color: #fdfdfd;
+}
+
+/* --- Regra 3: Limpeza para o container do CheckBox --- */
+/* Remove a borda e fundo do container principal do checkbox para não ficar duplo */
+.check-box.campo-somente-leitura {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: #1a1a1a;     /* Garante a cor do texto */
+    -fx-opacity: 1;             /* Garante que não fique apagado */
+    -fx-effect: none;           /* Remove o brilho do container principal */
+}
+
+/* --- Foco (Opcional - mantém a borda verde ao clicar) --- */
+.text-field.campo-somente-leitura:focused {
+    -fx-border-color: #218838;
+    -fx-effect: dropshadow(gaussian, rgba(40, 167, 69, 0.3), 8, 0.2, 0, 0);
+}
+.check-box.campo-somente-leitura:focused .box {
+     -fx-border-color: #218838 !important;
+}
+/* ===========================================================
+   CAMPO INVÁLIDO
+   =========================================================== */
+.campo-invalido {
+    -fx-background-color: #fdf2f2;
+    -fx-border-color: #d64545;
+    -fx-text-fill: #8a1f1f;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+.campo-invalido:focused {
+    -fx-border-color: #b3261e;
+}
+
+/* ===========================================================
+   PLACEHOLDER (PromptText)
+   =========================================================== */
+.text-field .prompt-text {
+    -fx-fill: #9da3ae;
+}
+
+/*
+   Atenção: A seção que definia "-fx-skin" foi removida daqui
+   pois causava o erro de ClassNotFoundException.
+*/
+
+
+/* --- FUNDO GERAL --- */
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- TARJA DO TOPO (Card Branco) --- */
+.card-titulo {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);
+}
+
+.titulo-principal {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.subtitulo {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* --- CONTAINER DAS TABELAS (Fundo das abas) --- */
+.container-tabelas {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);
+    -fx-padding: 10;
+}
+
+/* --- ESTILO DAS ABAS (TabPane) --- */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #ecf0f1 transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.tab-pane .tab:selected {
+    -fx-border-color: transparent transparent #3498db transparent; /* Linha azul embaixo da aba ativa */
+    -fx-border-width: 0 0 3 0;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #2c3e50; /* Texto escuro na aba ativa */
+}
+
+/* --- A TABELA (TableView) --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent; /* Remove linhas verticais */
+    -fx-padding: 10;
+}
+
+/* Cabeçalho da Tabela */
+.table-view .column-header-background {
+    -fx-background-color: #2c3e50; /* AZUL ESCURO IGUAL AO MENU */
+    -fx-background-radius: 5 5 0 0;
+    -fx-background-insets: 0 0 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 45px; /* Altura do cabeçalho */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+/* Linhas da Tabela */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #ecf0f1 transparent; /* Apenas linha horizontal fina */
+    -fx-padding: 5 0; /* Espaço interno para não ficar espremido */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #fafafa; /* Zebra bem suave */
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #eaf2f8; /* Azulzinho muito claro ao passar o mouse */
+}
+
+.table-row-cell:empty {
+    -fx-background-color: white; /* Remove linhas vazias no final */
+    -fx-border-color: transparent;
+}
+
+/* Texto das células */
+.table-cell {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #555;
+    -fx-font-size: 13px;
+}
+
+/* --- BOTÃO EXCLUIR --- */
+.btn-excluir-tabela {
+    -fx-background-color: #ffebee; /* Fundo vermelho bem claro */
+    -fx-text-fill: #c0392b; /* Texto vermelho escuro */
+    -fx-background-radius: 4;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 12;
+    -fx-cursor: hand;
+    -fx-border-color: #ffcdd2;
+    -fx-border-radius: 4;
+}
+
+.btn-excluir-tabela:hover {
+    -fx-background-color: #ef5350; /* Vermelho mais forte ao passar mouse */
+    -fx-text-fill: white;
+    -fx-border-color: #ef5350;
+}
+
+/*Scroll bar*/
+
+.table-view .scroll-bar:vertical,
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10px;
+    -fx-pref-height: 10px;
+    -fx-padding: 0;
+}
+
+.table-view .scroll-bar .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10em;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #dcdcdc;
+    -fx-background-radius: 10em;
+    -fx-background-insets: 2;
+}
+
+.table-view .scroll-bar .thumb:hover {
+    -fx-background-color: #bdc3c7;
+}
+
+.table-view .scroll-bar .thumb:pressed {
+    -fx-background-color: #95a5a6;
+}
+
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-opacity: 0;
+}
+
+.table-view .scroll-bar .increment-arrow,
+.table-view .scroll-bar .decrement-arrow {
+    -fx-shape: null;
+    -fx-padding: 0;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+/* Botão para exportar*/
+.btn-exportar {
+    -fx-background-color: #27ae60; /* Verde Excel */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+.btn-exportar:hover {
+    -fx-background-color: #2ecc71;
+}

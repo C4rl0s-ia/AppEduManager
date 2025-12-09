@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      style="-fx-background-color: transparent;"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.appedumanager.controller.DashboardTabelasController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <TabPane fx:id="tabPanePrincipal" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+
+        <Tab text="Professores">
+            <VBox spacing="10">
+                <HBox alignment="CENTER_RIGHT">
+                    <Button text="Exportar CSV" onAction="#handleExportarProfessores" styleClass="btn-exportar"/>
+                </HBox>
+                <TableView fx:id="tabelaProfessores" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colProfessorId" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="colProfessorNome" prefWidth="345.0" text="Nome" />
+                        <TableColumn fx:id="colProfessorIdade" prefWidth="46.0" text="Idade" />
+                        <TableColumn fx:id="colProfessorSexo" prefWidth="59.0" text="Sexo" />
+                        <TableColumn fx:id="colProfessorEspecialidade" prefWidth="300.0" text="Especialidade" />
+                        <TableColumn fx:id="colProfessorSalario" prefWidth="100" text="Salario" />
+                        <TableColumn fx:id="colProfessorAcoes" text="Ações" prefWidth="100"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <Tab text="Alunos">
+            <VBox spacing="10">
+                <HBox alignment="CENTER_RIGHT">
+                    <Button text="Exportar CSV" onAction="#handleExportarAlunos" styleClass="btn-exportar"/>
+                </HBox>
+                <TableView fx:id="tabelaAlunos" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colAlunoId" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="colAlunoNome" prefWidth="345.0" text="Nome" />
+                        <TableColumn fx:id="colAlunoIdade" prefWidth="46.0" text="Idade" />
+                        <TableColumn fx:id="colAlunoSexo" prefWidth="59.0" text="Sexo" />
+                        <TableColumn fx:id="colAlunoCurso" prefWidth="300.0" text="Curso" />
+                        <TableColumn fx:id="colAlunoMatricula" prefWidth="100" text="Matrícula" />
+                        <TableColumn fx:id="colAlunoMensalidade" prefWidth="100" text="Mensalidade" />
+                        <TableColumn fx:id="colAlunoAcoes" text="Ações" prefWidth="100"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <Tab text="Técnicos">
+            <VBox spacing="10">
+                <HBox alignment="CENTER_RIGHT">
+                    <Button text="Exportar CSV" onAction="#handleExportarTecnicos" styleClass="btn-exportar"/>
+                </HBox>
+                <TableView fx:id="tabelaTecnicos" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colTecnicoId" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="colTecnicoNome" prefWidth="345.0" text="Nome" />
+                        <TableColumn fx:id="colTecnicoIdade" prefWidth="46.0" text="Idade" />
+                        <TableColumn fx:id="colTecnicoSexo" prefWidth="59.0" text="Sexo" />
+                        <TableColumn fx:id="colTecnicoCurso" prefWidth="300.0" text="Curso" />
+                        <TableColumn fx:id="colTecnicoMatricula" prefWidth="100" text="Matrícula" />
+                        <TableColumn fx:id="colTecnicoMensalidade" prefWidth="100" text="Mensalidade" />
+                        <TableColumn fx:id="colTecnicoRegistroProfissional" prefWidth="300" text="Regis. Profissional" />
+                        <TableColumn fx:id="colTecnicoAcoes" text="Ações" prefWidth="100"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <Tab text="Bolsistas">
+            <VBox spacing="10">
+                <HBox alignment="CENTER_RIGHT">
+                    <Button text="Exportar CSV" onAction="#handleExportarBolsistas" styleClass="btn-exportar"/>
+                </HBox>
+                <TableView fx:id="tabelaBolsistas" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colBolsistaId" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="colBolsistaNome" prefWidth="345.0" text="Nome" />
+                        <TableColumn fx:id="colBolsistaIdade" prefWidth="46.0" text="Idade" />
+                        <TableColumn fx:id="colBolsistaSexo" prefWidth="59.0" text="Sexo" />
+                        <TableColumn fx:id="colBolsistaCurso" prefWidth="300.0" text="Curso" />
+                        <TableColumn fx:id="colBolsistaMatricula" prefWidth="100" text="Matrícula" />
+                        <TableColumn fx:id="colBolsistaMensalidade" prefWidth="100" text="Mensalidade" />
+                        <TableColumn fx:id="colBolsistaBolsa" prefWidth="100" text="Regis. Bolsa" />
+                        <TableColumn fx:id="colBolsistaAcoes" text="Ações" prefWidth="100"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <Tab text="Visitantes">
+            <VBox spacing="10">
+                <HBox alignment="CENTER_RIGHT">
+                    <Button text="Exportar CSV" onAction="#handleExportarVisitantes" styleClass="btn-exportar"/>
+                </HBox>
+                <TableView fx:id="tabelaVisistantes" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colVisitanteId" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="colVisitanteNome" prefWidth="345.0" text="Nome" />
+                        <TableColumn fx:id="colVisitanteIdade" prefWidth="46.0" text="Idade" />
+                        <TableColumn fx:id="colVisitanteSexo" prefWidth="59.0" text="Sexo" />
+                        <TableColumn fx:id="colVisistanteAcoes" text="Ações" prefWidth="100"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+        </Tab>
+
+    </TabPane>
+</VBox>

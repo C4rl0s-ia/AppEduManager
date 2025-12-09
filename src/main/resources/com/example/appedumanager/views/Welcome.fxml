@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="20"
+      style="-fx-background-color: #f4f6f8; -fx-padding: 20;"
+      alignment="TOP_CENTER">
+
+    <HBox styleClass="card-titulo" alignment="CENTER_LEFT" spacing="15">
+        <padding>
+            <Insets top="20" right="30" bottom="20" left="30"/>
+        </padding>
+        <VBox>
+            <Label text="EduManager" styleClass="titulo-principal"/>
+            <Label text="Visualize e gerencie todos os registros do sistema" styleClass="subtitulo"/>
+        </VBox>
+    </HBox>
+
+    <VBox VBox.vgrow="ALWAYS" styleClass="container-tabelas">
+        <fx:include source="DashboardTabelas.fxml" VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+</VBox>
