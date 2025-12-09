@@ -77,7 +77,7 @@ com.example.appedumanager
 ---
 ## 📸 Screenshots
 
-|              Dashboard Principal              |             Formulário de Cadastro             |
+|              Dashboard Principal              |             Painel de Cadastro             |
 |:---------------------------------------------:|:----------------------------------------------:|
 | ![Dashboard](https://i.imgur.com/O20PEUm.png) | ![Formulário](https://i.imgur.com/PWFagza.png) |
 
