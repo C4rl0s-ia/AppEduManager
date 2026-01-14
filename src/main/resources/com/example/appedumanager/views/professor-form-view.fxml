@@ -47,7 +47,7 @@
                         <TextField fx:id="txtEspecialidade" promptText="Ex: Matemática" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
                         <Label text="Salário:" styleClass="form-label" GridPane.rowIndex="4" />
-                        <TextField fx:id="txtSalario" promptText="Ex: 5000.00" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtSalario" promptText="Digite o salário em centavos ex: 500000" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                     </children>
                 </GridPane>
 

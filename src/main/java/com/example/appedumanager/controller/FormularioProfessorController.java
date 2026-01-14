@@ -28,8 +28,7 @@ public class FormularioProfessorController {
                     txtIdade.getText().isEmpty() ||
                     txtSexo.getText().isEmpty() ||
                     txtEspecialidade.getText().isEmpty() ||
-                    txtSalario.getText().isEmpty()) {
-                AlertUtils.showCustomAlert(Alert.AlertType.ERROR, "Erro de Validação",
+                    txtSalario.getText().isEmpty()) { AlertUtils.showCustomAlert(Alert.AlertType.ERROR, "Erro de Validação",
                         "Campos obrigatórios não podem estar vazios.");
                 return;
             }
@@ -46,7 +45,7 @@ public class FormularioProfessorController {
 
         } catch (NumberFormatException e) {
             AlertUtils.showCustomAlert(Alert.AlertType.ERROR, "Erro de Formato",
-                    "O campo 'Idade' deve conter apenas números.");
+                    "Ocorreu um erro: Verifique os dados inseridos e tente novamente.");
         } catch (Exception e) {
             AlertUtils.showCustomAlert(Alert.AlertType.ERROR, "Erro Inesperado",
                     "Ocorreu um erro: " + e.getMessage());
@@ -61,12 +60,14 @@ public class FormularioProfessorController {
         String especialidade = txtEspecialidade.getText();
         float salario = Float.parseFloat(txtSalario.getText());
 
+        float salarioTratado = salario / 100;
+
         Professor novoProfessor = new Professor();
         novoProfessor.setNome(nome);
         novoProfessor.setIdade(idade);
         novoProfessor.setSexo(sexo);
         novoProfessor.setEspecialidade(especialidade);
-        novoProfessor.setSalario(salario);
+        novoProfessor.setSalario(salarioTratado);
         return novoProfessor;
     }
 
