@@ -1,6 +1,6 @@
 # 🎓 EduManager - Sistema de Gestão Acadêmica
 
-![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Java](https://img.shields.io/badge/Java-23%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![JavaFX](https://img.shields.io/badge/JavaFX-MVC-4285F4?style=for-the-badge&logo=java&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Concluído-green?style=for-the-badge)
 
@@ -77,7 +77,7 @@ com.example.appedumanager
 ---
 ## 📸 Screenshots
 
-|              Dashboard Principal              |             Formulário de Cadastro             |
+|              Dashboard Principal              |             Painel de Cadastro             |
 |:---------------------------------------------:|:----------------------------------------------:|
 | ![Dashboard](https://i.imgur.com/O20PEUm.png) | ![Formulário](https://i.imgur.com/PWFagza.png) |
 
@@ -113,4 +113,4 @@ O conceito inicial de Herança foi expandido para uma aplicação comercial comp
 
 Desenvolvido por **Carlos Augusto da Silva Souza**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/carlos-4ugust0)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/carlos-augusto-da-silva-souza-43079b21a)
